@@ -39,10 +39,23 @@
     .page {
       display: none;
       animation: fadeIn 0.8s ease;
+      overflow-y: auto;
+      height: calc(100vh - 150px);
     }
 
     .active {
       display: block;
+    }
+
+    img, video {
+      width: 300px;
+      border-radius: 10px;
+      margin: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    video {
+      background: #000;
     }
 
     @keyframes fadeIn {
@@ -67,7 +80,28 @@
   <div id="rants" class="page">
     <h2>Rants Page</h2>
     <p>Ilagay mo mga rants mo dito
-mag add pako ng message botton</p>
+    mag add pako ng message botton</p>
+
+    <!-- Media content (Pictures and Videos) -->
+    <div>
+      <!-- Picture 1 -->
+      <img src="https://raw.githubusercontent.com/USERNAME/REPO/main/images/pic1.jpg" alt="Picture 1">
+
+      <!-- Video 1 -->
+      <video controls>
+        <source src="https://raw.githubusercontent.com/USERNAME/REPO/main/videos/video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Picture 2 -->
+      <img src="https://raw.githubusercontent.com/USERNAME/REPO/main/images/pic2.jpg" alt="Picture 2">
+
+      <!-- Video 2 -->
+      <video controls>
+        <source src="https://raw.githubusercontent.com/USERNAME/REPO/main/videos/video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 
   <div id="news" class="page">
