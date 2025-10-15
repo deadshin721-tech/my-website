@@ -95,7 +95,7 @@ video {
 .divider {
   border: none;
   height: 2px;
-  width: 55%;
+  width: 100%;
   background: rgba(255, 255, 255, 0.3); /* Light transparent white */
   margin: 20px auto;
 }
