@@ -27,13 +27,13 @@ h1 {
   border-radius: 10px;
   margin: 10px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-buttons h3:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Pages */
@@ -54,7 +54,7 @@ img, video {
   width: 300px;
   border-radius: 10px;
   margin: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 video {
@@ -63,8 +63,14 @@ video {
 
 /* Fade In Animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Floating Icon */
@@ -77,14 +83,19 @@ video {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
 /* Divider Line Between Media */
 .divider {
   border: none;
   height: 2px;
   width: 80%;
-  background: rgba(255, 255, 255, 0.3); /* white-ish transparent line */
+  background: rgba(255, 255, 255, 0.3); /* Light transparent white */
   margin: 20px auto;
 }
