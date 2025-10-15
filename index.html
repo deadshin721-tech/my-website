@@ -1,119 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #7b00ff, #f30769);
-      color: white;
-      text-align: center;
-      height: 100vh;
-      overflow: hidden;
-    }
 
-    h1 {
-      margin-top: 60px;
-      font-size: 40px;
-      animation: fadeIn 1.5s ease;
-    }
-
-    h3 {
-      display: inline-block;
-      background: linear-gradient(90deg, #794066, #720652);
-      padding: 10px 16px;
-      border-radius: 10px;
-      margin: 10px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    h3:hover {
-      transform: scale(1.1);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    .page {
-      display: none;
-      animation: fadeIn 0.8s ease;
-      overflow-y: auto;
-      height: calc(100vh - 150px);
-    }
-
-    .active {
-      display: block;
-    }
-
-    img, video {
-      width: 300px;
-      border-radius: 10px;
-      margin: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-
-    video {
-      background: #000;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <h1>Hello Guys!</h1>
-  <h3 onclick="showPage('suggestions')">Suggestion</h3>
-  <h3 onclick="showPage('rants')">Rants?</h3>
-  <h3 onclick="showPage('news')">relapse?</h3>
 
-  <!-- Hidden pages -->
-  <div id="suggestions" class="page">
-    <h2>Suggestions Page</h2>
-    <p>Lagyan mo ng suggestions dito mag lalagay pako ng button ha</p>
+  <!-- Floating animated icon -->
+  <div class="floating">🌟</div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons">
+    <h3 onclick="showPage('suggestions')">Suggestion</h3>
+    <h3 onclick="showPage('rants')">Rants?</h3>
+    <h3 onclick="showPage('news')">Relapse?</h3>
   </div>
 
+  <!-- Suggestions Page -->
+  <div id="suggestions" class="page">
+    <h2>Suggestions Page</h2>
+    <p>Lagyan mo ng suggestions dito. Maglalagay pa ako ng button ha.</p>
+  </div>
+
+  <!-- Rants Page -->
   <div id="rants" class="page">
     <h2>Rants Page</h2>
-    <p>Ilagay mo mga rants mo dito
-    mag add pako ng message botton</p>
-
-    <!-- Media content (Pictures and Videos) -->
+    <p>Ilagay mo mga rants mo dito. Mag-add pa ako ng message button.</p>
     <div>
-      <!-- Picture 1 -->
-      <img src="received_788197783982826.jpeg" alt="Picture 1">
-
-      <!-- Video 1 -->
+      <img src="received_788197783982826.jpeg" alt="Picture 1" />
       <video controls>
-        <source src="Messenger_creation_769555919032761.mp4" type="video/mp4">
+        <source src="Messenger_creation_769555919032761.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-
-      <!-- Picture 2 -->
-      <img src="received_1301756421488482.jpeg" alt="Picture 2">
-
-      <!-- Video 2 -->
+      <img src="received_1301756421488482.jpeg" alt="Picture 2" />
       <video controls>
-        <source src="received_1864951504456989.mp4" type="video/mp4">
+        <source src="received_1864951504456989.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 
+  <!-- News Page -->
   <div id="news" class="page">
-    <h2>relapse?</h2>
+    <h2>Relapse?</h2>
     <p>May bagyo nga ba o may bago lang?</p>
   </div>
 
-  <script>
-    function showPage(pageId) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
-      document.getElementById(pageId).classList.add('active')
-    }
-  </script>
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
