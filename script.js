@@ -1,17 +1,15 @@
 // Function to show a specific page
 function showPage(pageId) {
-  // Hide all pages
   document.querySelectorAll('.page').forEach(page => {
     page.classList.remove('active');
   });
-
-  // Show the selected page
   document.getElementById(pageId).classList.add('active');
 }
 
 // Set default page on load
 window.onload = () => {
   showPage('suggestions');
+  loadRants(); // ⬅️ Load saved messages on page load
 };
 
 // Function to post a rant/message
@@ -26,12 +24,31 @@ function postRant() {
     newRant.classList.add("rant-message");
     newRant.textContent = rantText;
 
-    // Add new rant to the top of the list
     rantList.prepend(newRant);
-
-    // Clear input after posting
     input.value = "";
+
+    saveRant(rantText); // ⬅️ Save the message
   } else {
     alert("Please type something before posting.");
   }
+}
+
+// Save rants to localStorage
+function saveRant(rant) {
+  let rants = JSON.parse(localStorage.getItem("rants")) || [];
+  rants.unshift(rant); // add to top
+  localStorage.setItem("rants", JSON.stringify(rants));
+}
+
+// Load saved rants from localStorage
+function loadRants() {
+  const rantList = document.getElementById("rantList");
+  const rants = JSON.parse(localStorage.getItem("rants")) || [];
+
+  rants.forEach(rantText => {
+    const rantDiv = document.createElement("div");
+    rantDiv.classList.add("rant-message");
+    rantDiv.textContent = rantText;
+    rantList.appendChild(rantDiv);
+  });
 }
