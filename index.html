@@ -26,6 +26,15 @@
   <div id="suggestions" class="page">
     <h2>Suggestions Page</h2>
     <p>Lagyan mo ng suggestions dito. Maglalagay pa ako ng button ha.</p>
+
+    <!-- Rant Message Box moved here -->
+    <div class="rant-box">
+      <h3>Write your rant below:</h3>
+      <textarea id="rantInput" placeholder="Type your rant here..."></textarea>
+      <br />
+      <button onclick="postRant()">Post Rant</button>
+      <div id="rantList"></div>
+    </div>
   </div>
 
   <!-- Rants Page -->
@@ -48,9 +57,8 @@
       <hr class="divider">
 
       <video controls>
-
-        <source src="received_1864951504456989.mp4" type="video/mp4" /> </video>
-      
+        <source src="received_1864951504456989.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
 
@@ -64,3 +72,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
