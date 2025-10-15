@@ -80,3 +80,11 @@ video {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
+/* Divider Line Between Media */
+.divider {
+  border: none;
+  height: 2px;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.3); /* white-ish transparent line */
+  margin: 20px auto;
+}
